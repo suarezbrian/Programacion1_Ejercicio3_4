@@ -19,11 +19,8 @@ int validarNumero(int numero);
 
 int main() {
 	setbuf(stdout, NULL);
-	float numero;
 
-	numero = returnNumero();
-
-	mostrarNumero(numero);
+	mostrarNumero(returnNumero());
 
 	return 0;
 }
@@ -49,10 +46,9 @@ int validarNumero(int numero)
 {
 	while(numero < 1 || numero > 100)
 	{
-		printf("El numero ingresado no es valido.");
-		printf(" Ingrese un numero : ");
-		scanf("%d", &numero);
+		printf("El numero ingresado no es valido. Ingrese un numero :");
 
+		scanf("%d", &numero);
 	}
 	return numero;
 }
